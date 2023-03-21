@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap');
+
+:root{
+    --color-light-50: aliceblue;
+    --color-light-100: rgb(181, 188, 193);
+
+    --color-dark-50: #797984 ;
+    --color-dark-100: #312d37;
+    --color-dark-500: rgb(37, 37, 37);
+
+    --color-green-50: #b7ffff;
+    --color-green-100:#70c1bf;
+    --color-green-200:#2b7c7b;
+
+    --color-gradient: linear-gradient(90deg, var(--color-green-50), var(--color-green-100), var(--color-green-200));
+}
+
+*{
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--color-gradient);
+    color: var(--color-light-50);
+}
+
+#calculator{
+    background-color: var(--color-dark-500);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.323);
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+#calculator h2{
+    font-size: 30px;
+    position: relative;
+}
+
+#calculator h2::before{
+    position: absolute;
+    content: '';
+    height: 3px;
+    width: 150px;
+    background: var(--color-gradient);
+    bottom: 5px;
+}
+
+#input_box{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.input_field{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.input_field label{
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--color-light-100);
+}
+
+.input_field input{
+    border: none;
+    border-bottom: 2px solid var(--color-dark-100);
+    color: var(--color-light-50);
+    font-weight: 500;
+    background-color: transparent;
+    font-size: 20px;
+    padding: 5px;
+}
+
+.input_field input:focus{
+    outline: none;
+}
+
+#result{
+    text-align: center;
+}
+
+#total{
+    font-size: 40px;
+}
+
+#calculate{
+    background: var(--color-gradient);
+    border: none;
+    padding: 10px;
+    color: var(--color-light-50);
+    font-size: 18px;
+    font-weight: bolder;
+    border-radius: 4px;
+    cursor: pointer;
+}
